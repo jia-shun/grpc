@@ -6,7 +6,6 @@ import org.js.grpc.client.entry.Person;
 import org.js.grpc.person.FindPersonRequest;
 import org.js.grpc.person.FindPersonResponse;
 import org.js.grpc.person.PersonGrpc;
-import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,7 +13,6 @@ import java.util.concurrent.TimeUnit;
  * @author JiaShun
  * @date 2018/7/11 10:43
  */
-
 public class PersonClient{
     private final ManagedChannel channel;
     private final PersonGrpc.PersonBlockingStub blockingStub;

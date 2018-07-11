@@ -8,8 +8,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>grpc-lib</module>
         <module>grpc-server</module>
+        <module>grpc-client</module>
     </modules>
 
     <name>grpc</name>
@@ -30,7 +30,6 @@
         <protobuf.version>3.6.0</protobuf.version>
         <spring-boot.version>2.0.3.RELEASE</spring-boot.version>
         <protobuf.version>3.6.0</protobuf.version>
-        <grpc-project.version>0.0.1-SNAPSHOT</grpc-project.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -60,12 +59,6 @@
                 <groupId>io.grpc</groupId>
                 <artifactId>grpc-stub</artifactId>
                 <version>${grpc.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.js</groupId>
-                <artifactId>grpc-lib</artifactId>
-                <version>${grpc-project.version}</version>
             </dependency>
 
             <dependency>

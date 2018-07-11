@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class PersonServiceImpl implements PersonService {
     @Override
     public Person findById(int id) throws InterruptedException{
-        PersonClient client = new PersonClient("127.0.0.1",50051);
+        PersonClient client = new PersonClient("192.168.8.224",50051);
         Person person = client.findById(1);
         client.shutdown();
         return person;

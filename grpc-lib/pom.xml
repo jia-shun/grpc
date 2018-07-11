@@ -2,45 +2,42 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>org.js</groupId>
     <artifactId>grpc-lib</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
 
     <name>grpc-lib</name>
     <description>Demo project for Spring Boot</description>
-
-    <parent>
-        <groupId>org.js</groupId>
-        <artifactId>grpc</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
 
     <properties>
         <os-maven-plugin.version>1.5.0.Final</os-maven-plugin.version>
         <protobuf-maven-plugin.version>0.5.1</protobuf-maven-plugin.version>
         <protoc.version>3.5.1-1</protoc.version>
+        <protobuf.version>3.6.0</protobuf.version>
+        <grpc.version>1.13.1</grpc.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
+            <version>${protobuf.version}</version>
         </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-netty</artifactId>
+            <version>${grpc.version}</version>
         </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-protobuf</artifactId>
+            <version>${grpc.version}</version>
         </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-stub</artifactId>
+            <version>${grpc.version}</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -69,10 +66,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
